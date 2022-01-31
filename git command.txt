@@ -1,0 +1,46 @@
+Git
+
+git init (initialize)
+git add = nambah file (git add . menambah semua file baru) menambah ke staging area
+git status = cek status
+git commit = capture snapshot dari stagging area
+git config
+git branch = git branch nama_branch
+git helpgit log 
+git log = lihat history perubahan
+
+Config (sebelum commit/commit pertama melakukan configuration) :
+$ git config --global user.name "Rizki"
+$ git config --global user.email "ramadhan.rtio@gmail.com"
+
+Commit
+$ git commit -m "menambahkan file index.html"
+$ git commit -am "pesan" (jika modified suatu file)
+
+git checkout 1fa8f(5 digit pertama) mengembalikan semua perubahan
+git checkout 1fa8f nama_file (mengembalikan file tertentu/berpindah commit)
+
+Implementasi branch:
+1. Berpindah branch:
+ > git checkout nama_branch
+2. menampilkan visualisasi branch
+ > git log --all --decorate --oneline --graph
+3. membuat alias :
+ > alias graph ="git log --all --decorate --oneline --graph"
+4. Jenis Merge
+ > Fast Forward --> branch yang ada di direct path
+ > Three Way Merge --> cara sama (nanti masuk code editor save close done)
+5. git merge nama_branch (master/branch yang ingin di gabungkan)
+6. Menghapus Merge
+ > git branch -d nama_branch (menghapus yang sudah di merged)
+ > git branch -D nama_branch (belum di merged)
+7. Mengetahui branch yang sudah di merged
+ > git branch --merged
+
+Git merge Conflict (ketika 2 branch file tumpang tindih sehingga di selesaikan manual di code editor)
+> perintah Git merge nama_file
+> checokut berpindah commit sebelumnya:
+	$ git checkout 16ddcb3 (hash 7 digit pertama di log)
+> menambah branch di commit:
+	$ git branch test
+> menormalkan branch di commit : $ git checkout test
