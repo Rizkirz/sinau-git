@@ -44,3 +44,29 @@ Git merge Conflict (ketika 2 branch file tumpang tindih sehingga di selesaikan m
 > menambah branch di commit:
 	$ git branch test
 > menormalkan branch di commit : $ git checkout test
+
+Git Remote
+cd nama_repo (masuk ke folder repo)
+$ git remote
+$ git remote -v (cek alamat)
+$ git clone https://github.com/Rizkirz/rizki-git-test.git (link github)
+
+untuk nambah file:
+git add . 
+git commit -m "pesan"
+git push 
+
+$ graph
+* 5c9e5e9 (HEAD -> main) menambah file index.html
+* f8b5f05 (origin/main, origin/HEAD) Initial commit (origin masih ketinggalan)
+solusi:
+git push
+
+Menyimpan file locak ke github menggunakan git(di github ada tutorial) :
+1. Membuat repo baru di github tanpa ceklist readme
+2. Masuk ke folder repo yang diingin dimasukan github (cd namafolder)
+3. git remote add origin https://github.com/Rizkirz/rizki-git2.git
+4. git push -u origin master atau main
+
+git fetch = mengecek commit di github sampai mana
+git pull = menarik yang ada di pull untuk kasus ketika local dan remote file tubrukan/merge conflict
