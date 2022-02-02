@@ -48,7 +48,7 @@ Git merge Conflict (ketika 2 branch file tumpang tindih sehingga di selesaikan m
 Git Remote
 cd nama_repo (masuk ke folder repo)
 $ git remote
-$ git remote -v (cek alamat)
+$ git remote -v (cek alamat/pemilik remote)
 $ git clone https://github.com/Rizkirz/rizki-git-test.git (link github)
 
 untuk nambah file:
@@ -70,3 +70,15 @@ Menyimpan file locak ke github menggunakan git(di github ada tutorial) :
 
 git fetch = mengecek commit di github sampai mana
 git pull = menarik yang ada di remote/pull untuk kasus ketika local dan remote file tubrukan/merge conflict
+
+Multiple remote (memastikan 2 akun remote/multipe sama dengan local)
+1. git clone akun kita (remote)
+2. git remote add namaremote https://github.com/Rizkirz/rizki-git2.git (link repo yang ingin di multiple remote)
+3. git fetch namaremote (mengambil commit/mengecek commit)
+Ketika remote yang diambil mengubah repo/file melalui github asli/pemilik local dan remote lainnya harus merge
+dengan cara :
+> git fetch namaremote
+> grap ngecek commit sejajar/tidak (mendahului 1 commit tidak sama)
+> git merge namaremote/nama-branch
+> local dan remote asli sejajar tetapi remote 2 belum sehingga dilakukan:
+ - git push -u origin master/main (namabranch)
