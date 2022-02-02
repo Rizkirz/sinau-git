@@ -69,4 +69,4 @@ Menyimpan file locak ke github menggunakan git(di github ada tutorial) :
 4. git push -u origin master atau main
 
 git fetch = mengecek commit di github sampai mana
-git pull = menarik yang ada di pull untuk kasus ketika local dan remote file tubrukan/merge conflict
+git pull = menarik yang ada di remote/pull untuk kasus ketika local dan remote file tubrukan/merge conflict
