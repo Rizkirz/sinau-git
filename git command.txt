@@ -82,3 +82,17 @@ dengan cara :
 > git merge namaremote/nama-branch
 > local dan remote asli sejajar tetapi remote 2 belum sehingga dilakukan:
  - git push -u origin master/main (namabranch)
+
+Remote branch
+Membuat pull request dengan branch 
+> git checkout -b namabranch (pindah branch dan membuat branch baru)
+> merubah isi file yang diinginkan
+> git push origin namabranch (kita)
+> masuk github untuk melakukan pull request
+ketika merge disetujui pemilik untuk menyamakan commit:
+> git fetch namaremote(pemilik asli)
+> git checkout balik ke branch master
+> git merge namaremote/namabranch(master/main) untuk local
+> git push origin master/main (untuk menyamakan remote asli dan local dengan remote(peminta pull request) untuk pull request)
+> hapus branch yang sudah tidak terpakai git branch -d namabranch
+> git push origin --delete namabranch(pullrequest)
